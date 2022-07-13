@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style_details_8.css" />
+    <title>毕业展</title>
+</head>
+
+<body>
+    <div id="gyroContain">
+    <div id="main"></div>
+
+    <script src="./js1/jquery.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <div class="check_st8">
+        <input style="border: 0ch;background-color:#000;color: rgb(255, 255, 255);"  type="button" value="返回" onclick="goBack()"><div class="btn"></div>
+    </div>
+    <div class="manualItem">
+        <div class="slide8 list">
+            <ul class="slide8">
+                <li class="slide8-item"><img src="./1/chengyan/5.gif" alt=""></li>
+                <li class="slide8-item"><img src="./1/chengyan/4.jpg" alt=""></li>
+                <li class="slide8-item"><img src="./1/chengyan/3.jpg" alt=""></li>
+                <li class="slide8-item"><img src="./1/chengyan/2.jpg" alt=""></li>
+                <li class="slide8-item"><img src="./1/chengyan/1.jpg" alt=""></li>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        var width = window.innerWidth
+
+        var lis_8 = $('.slide8-item');
+        $('.slide8').on('mouseover', 'li', function (event) {
+            var index_8 = $(this).index()
+            for (var i = 1; i < lis_8.length; i++) {
+                if (i > index_8) {
+                    $(lis_8.eq(i)).css({
+                        left: 0.8*width - 30 * (1 - i) + 'px'
+                    })
+                }
+
+            }
+        })
+        $('.slide8').on('mouseout', function (event) {
+            for (var i = 0; i < lis_8.length; i++) {
+                $(lis_8.eq(i)).css({
+                    left: ''
+                })
+            }
+        })
+
+    </script>
+    
+            
+        <h1 id="a" style="display: none" color:000 > </h1>
+        <h1 id="b"></h1>
+        <script>
+            a.style.visibility='hidden';
+            a.style.visibility='';
+            a.style.display='none';
+            a.style.display='';
+        </script>
+
+    </div>
+
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        function goBack() {
+                window.history.back()
+            }
+    </script>
+
+</body>
+
+</html>
